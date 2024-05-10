@@ -1,13 +1,16 @@
 package Punto2;
 
 import Punto5.Domicilio; //Punto 5B)
+import Punto7.Computadora; //Punto 7
 
 public class Persona 
 {
 	
 	private String nombre;
 	private String apellido;
-	private Domicilio domicilio;//Punto 5B) 
+	private Domicilio domicilio;//Punto 5B)
+	private int DNI; //Punto 7.
+	private Computadora computadora; //Punto 7
 
 	//Punto 3 Crear constructor y metodo obtenerNombreCompleto() (líneas 13 y 31)	
 	public Persona() 
@@ -53,6 +56,19 @@ public class Persona
 		}
 		
 	}
+	
+	
+	//Metodos del punto 7 que simulan trabajar y descansar.
+	public void trabajar() 
+	{
+		System.out.println("Trabajando..");
+	}
+	
+	public void descansar() 
+	{
+		System.out.println("Descansando..");
+	}
+	
 	
 	
 	@Override

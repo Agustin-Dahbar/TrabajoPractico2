@@ -9,7 +9,7 @@ public class Persona
 	private String apellido;
 	private Domicilio domicilio;//Punto 5B) 
 
-	//Punto 3 Crear constructor y metodo obtenerNombreCompleto() (líneas 10 y 28)	
+	//Punto 3 Crear constructor y metodo obtenerNombreCompleto() (líneas 13 y 31)	
 	public Persona() 
 	{
 		this.nombre = "";

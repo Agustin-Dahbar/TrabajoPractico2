@@ -15,19 +15,27 @@ public class Domicilio
 		ciudad = "";
 	}
 	
+	//Constructor para el punto 9
+	public Domicilio(String calle, int numero, String ciudad) 
+	{
+		this.calle = calle;
+		this.numero = numero;
+		this.ciudad = ciudad;
+	}
+	
 	//Getters y setters de los atributos
-	//Setter
+	//Calle
 	public void setCalle(String calle) 
 	{
 		this.calle = calle;
 	}
 	
-	//Getter
 	public String getCalle() 
 	{
 		return calle;
 	}
 	
+	//Numero
 	public void setNumero(int numero) 
 	{
 		this.numero = numero;
@@ -38,6 +46,8 @@ public class Domicilio
 		return numero;
 	}
 	
+	
+	//Ciudad
 	public void setCiudad(String ciudad) 
 	{
 		this.ciudad = ciudad;

@@ -3,6 +3,9 @@ package Punto4;
 import Punto2.Persona;
 import Punto5.Domicilio;
 import Punto6.Dado;
+import Punto8.TarjetaDeCredito;
+import Punto9.CuentaBancaria;
+import Punto9.TipoCuenta;
 
 public class Test 
 {
@@ -48,6 +51,8 @@ public class Test
 		System.out.println(yo);
 		yo.mostrarDomicilio();
 		
+		
+		//Separación de puntos.
 		System.out.println("");
 		
 		
@@ -81,12 +86,8 @@ public class Test
 				System.out.println(dadoDos + " es el mayor");
 			}
 		}
+				
 		
-		
-		
-		System.out.println("");
-		
-		//Separación
 		System.out.println("Creamos un dado, lo lanzamos 100 veces y sumamos sus 100 valores para obtener su promedio.");
 		
 		//Ultimo ejercicio del punto 6. Mostrar el promedio de 100 lanzamientos.
@@ -106,5 +107,72 @@ public class Test
 		promedio = sumaDeValores/100.0;
 		System.out.println("El promedio de los 100 lanzamientos de dados es " + promedio);
 		
+		
+		//Separación de puntos
+		System.out.println("");
+		
+		
+		//Punto 8 Parte 2
+		TarjetaDeCredito tarjeta = new TarjetaDeCredito("Número 4145-4141-2222-1111", "Juan Perez", 10000);
+		
+		//Realizamos una compra con un monto de 4000. Ya que el limite es 10000, se podrá llevar a cabo.
+		double montoCompra = 4000; //A partir de 10001 nos ejecutaría el else, ya que se nos devolvería false por ser mayor al límite.
+		
+		//Evaluamos si con el monto podemos realizar la compra, en caso de que si acumulamos este valor al gasto actual. SI no podemos lo indicaremos.
+		if(tarjeta.realizarCompra(montoCompra))  //Retorna true. Es decir que la condición es true. Por lo tanto se ejecuta el bloque de código siguiente.
+		{
+			System.out.println("Compra realizada por $ " + montoCompra);
+			tarjeta.acumularGastoActual(montoCompra);
+		}
+		else 
+		{
+			System.out.println("No se puede realizar la compra ya que el monto supera al límite.");
+		}
+		
+		//Una vez realizada la evaluación indicamos cuanto gasto disponible nos queda.
+        System.out.println("El monto disponible actual es de " + tarjeta.montoDisponible());
+		
+        
+        
+        //Actualizamos el límite a 3000.
+        tarjeta.actualizarLimite(3000);
+        
+        
+        //Reintentamos otra compra con 4000 y esta vez debería ejecutarse el else.
+        double segundoMontoCompra = 4000;
+        
+        if(tarjeta.realizarCompra(segundoMontoCompra)) 
+        {
+        	System.out.println("Compra realizada por $ " + segundoMontoCompra);
+        	tarjeta.acumularGastoActual(montoCompra);
+        }
+        else 
+        {
+        	System.out.println("No se puede realizar la compra, el monto es mayor al límite.");
+        }
+        
+        
+        System.out.println("El monto disponible actual es de " + tarjeta.montoDisponible());
+        
+        
+        //Separación de puntos
+        System.out.println("");
+        
+        //PUNTO 9: Comprobamos que funcionan los metodos de la nueva clase. Le depositamos 10k, le restamos 3k y en consola vemos como nos quedan 7k de saldo.
+        CuentaBancaria cuenta = new CuentaBancaria("hola", TipoCuenta.CAJA_AHORRO , persona);
+        cuenta.depositar(10000);
+        cuenta.extraer(3000);
+        cuenta.obtenerSaldo();
+        
+        
+        
+        //Luego de creada ya la cuenta bancaria con el CBU lo devolvemos con su metodo.
+        cuenta.generarCBU();
+        
+        
+        
+        
+        
+        
 	}
 }

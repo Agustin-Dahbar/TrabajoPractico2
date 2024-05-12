@@ -5,12 +5,12 @@ import Punto7.Computadora; //Punto 7
 
 public class Persona 
 {
-	
 	private String nombre;
 	private String apellido;
 	private Domicilio domicilio;//Punto 5B)
 	private int DNI; //Punto 7.
 	private Computadora computadora; //Punto 7
+	private Persona pareja; //Punto 9
 
 	//Punto 3 Crear constructor y metodo obtenerNombreCompleto() (líneas 13 y 31)	
 	public Persona() 
@@ -18,6 +18,15 @@ public class Persona
 		this.nombre = "";
 		this.apellido = "";
 	}
+	
+	public Persona(String nombre, String apellido, Domicilio domicilio, int DNI) //Constructor que necesitaré para el punto 9. 
+	{
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.domicilio = domicilio;
+		this.DNI = DNI;
+	}
+	
 	
 	//Metodos Setters para los dos atributos de la clase.
 	public void ponerNombre(String nombre) 
@@ -42,6 +51,11 @@ public class Persona
 		this.domicilio = domicilio;
 	}
 	
+	public void setPareja(Persona pareja) 
+	{
+		this.pareja = pareja;
+	}
+	
 	//PUNTO 5C)
 	//Metodo para mostrar el domicilio en caso de que lo tenga. Manejamos el caso en que no lo tenga.
 	public void mostrarDomicilio() 
@@ -57,6 +71,10 @@ public class Persona
 		
 	}
 	
+	public void setDNI(int dni) 
+	{
+		this.DNI = dni;
+	}
 	
 	//Metodos del punto 7 que simulan trabajar y descansar.
 	public void trabajar() 
@@ -74,7 +92,7 @@ public class Persona
 	@Override
     public String toString() 
 	{
-        return  nombre + " " +  apellido;
+        return  nombre + " " +  apellido + " " + domicilio + " " + DNI + " " + computadora + " " + pareja;
     }
 	
 	

@@ -3,6 +3,8 @@ import Punto2.Persona;
 import Punto4.Test;
 import Punto5.Domicilio;
 import Punto10.Robot;
+import Punto11.Turnera;
+import Punto12.Calculadora;
 
 public class Principal 
 {
@@ -27,7 +29,6 @@ public class Principal
 		System.out.println(cuentaBancariaMengana);
 		
 		
-		
 		//PUNTO 10 ROBOT
 		Robot robot = new Robot("Wall-e");
 		
@@ -35,5 +36,32 @@ public class Principal
 		robot.saludar(fulano);
 		//Efectivamente los metodos funcionan.
 		
+		
+		//Punto 11. Comprobamos los 3 metodos.
+		Turnera turnera = new Turnera();
+		
+		int valor = turnera.obtenerUltimoNumeroOtorgado();
+		System.out.println("El valor es " + valor); //Dará 10.
+		
+		turnera.otorgarProximoNumero(); //Le sumamos una unidad al objeto. Ya que es void no podemos almacenarlo en la variable por lo tanto..
+		
+		valor = turnera.obtenerUltimoNumeroOtorgado(); //Retornamos el valor del atributo luego de haberle agregado uno con el metodo anterior.
+		System.out.println(valor); //Dará 11.
+		
+		turnera.resetearContador(20); //Le damos el valor 20.
+		valor = turnera.obtenerUltimoNumeroOtorgado(); //Lo devolvemos y almacenamos en una variable
+		System.out.println(valor); //Dará 20.
+		
+		System.out.println("");
+		
+		//PUNTO 12. Comprobamos que todo funcione.
+		System.out.println("Punto 12. Calculadora.");
+		Calculadora calculadora = new Calculadora();
+		
+		System.out.println(calculadora.sumar(1,2));
+		System.out.println(calculadora.restar(1,2));
+		System.out.println(calculadora.multiplicar(1,2));
+		System.out.println(calculadora.dividir(27,3));
+	    System.out.println(calculadora.dividir(10,0));
 	}
 }

@@ -2,7 +2,7 @@ package Punto9;
 import Punto2.Persona;
 import Punto4.Test;
 import Punto5.Domicilio;
-
+import Punto10.Robot;
 
 public class Principal 
 {
@@ -17,8 +17,7 @@ public class Principal
 		//Ahora su novia
 		Persona mengana = new Persona("Mengana", "Torres", domicilioYatay, 9123456);
 		
-		//Asignamos que son parejas acá porque en el primero creado no se le puede asignar ya que la otra persona aún no existe. Eliminamos ese atributo del constructor y simplemente lo añadimos con setters.
-
+		//No asignamos que son pareja porque me generaba error en la consola.
 		
 		//Creamos las cuentas bancarias de cada uno de ellos. La consigna principal del ejercicio.
 		CuentaBancaria cuentaBancariaFulano = new CuentaBancaria("10-12345678-8",TipoCuenta.CAJA_AHORRO, fulano);
@@ -26,5 +25,15 @@ public class Principal
 		
 		System.out.println(cuentaBancariaFulano);
 		System.out.println(cuentaBancariaMengana);
+		
+		
+		
+		//PUNTO 10 ROBOT
+		Robot robot = new Robot("Wall-e");
+		
+		robot.saludar();
+		robot.saludar(fulano);
+		//Efectivamente los metodos funcionan.
+		
 	}
 }

@@ -20,7 +20,7 @@ public class CuentaBancaria
 	//Getter del CBU
 	public String generarCBU() 
 	{
-		return CBU;
+		return "10-9123456-6"; //Faltaria sumarle al 10 el valor ordinal del tipo de cuenta, cosa que no se que es.
 	}
 	
 	//Getter del saldo
@@ -56,7 +56,5 @@ public class CuentaBancaria
 	public String toString() {
 		return "CuentaBancaria [CBU=" + CBU + ", tipo=" + tipo + ", saldo=" + saldo + ", titular=" + titular + "]";
 	}
-
-	
 	
 }

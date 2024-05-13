@@ -1,11 +1,11 @@
 package Punto4;
 
 import Punto2.Persona;
-import Punto5.Domicilio;
 import Punto6.Dado;
 import Punto8.TarjetaDeCredito;
 import Punto9.CuentaBancaria;
 import Punto9.TipoCuenta;
+import Punto5.Domicilio;
 
 public class Test 
 {
@@ -16,6 +16,7 @@ public class Test
 		//Le asignamos valores a sus dos atributos mediante los metodos setters.
 		persona.ponerNombre("Fulano"); 
 		persona.ponerApellido("Gomez");
+		persona.setDNI(12345678);
 		
 		//Devolvemos los valores de sus dos atributos via el metodo que los concatena y devuelve juntos.
 		System.out.println(persona.obtenerNombreCompleto());
@@ -159,7 +160,7 @@ public class Test
         System.out.println("");
         
         //PUNTO 9: Comprobamos que funcionan los metodos de la nueva clase. Le depositamos 10k, le restamos 3k y en consola vemos como nos quedan 7k de saldo.
-        CuentaBancaria cuenta = new CuentaBancaria("hola", TipoCuenta.CAJA_AHORRO , persona);
+        CuentaBancaria cuenta = new CuentaBancaria("first cuentaBancaria", TipoCuenta.CAJA_AHORRO , persona);
         cuenta.depositar(10000);
         cuenta.extraer(3000);
         cuenta.obtenerSaldo();

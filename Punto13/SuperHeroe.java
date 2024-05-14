@@ -7,6 +7,15 @@ public class SuperHeroe
 	private int resistencia;
 	private int superpoderes;
 	
+	//Constructor
+	public SuperHeroe(String nombre, int fuerza, int resistencia, int superpoderes) 
+	{
+		this.nombre = nombre;
+		this.fuerza = fuerza;
+		this.resistencia = resistencia;
+		this.superpoderes = superpoderes;
+	}
+	
 	//Setters de los 3 atributos int.
 	public void setFuerza(int fuerza) 
 	{
@@ -45,7 +54,7 @@ public class SuperHeroe
 		{
 			triunfosProta++;
 		}
-		else if(this.resistencia > rival.resistencia) 
+		else if(this.resistencia < rival.resistencia) 
 		{
 			triunfosRival++;
 		}
@@ -55,21 +64,21 @@ public class SuperHeroe
 		{
 			triunfosProta++;
 		}
-		else if(this.superpoderes > rival.superpoderes) 
+		else if(this.superpoderes < rival.superpoderes) 
 		{
 			triunfosRival++;
 		}
 		
 		//Evaluamos que superheroe fue el ganador e imprimimos el resultado de la competencia.
-		if(triunfosProta > triunfosRival) 
+		if(triunfosProta >= 2) //Si el prota ganó al menos 2 veces, triunfó. 
 		{
 			System.out.println("TRIUNFO.");
 		}
-		else if(triunfosProta < triunfosRival) 
+		else if(triunfosRival >=2) //Si el rival ganó al menos 2 veces, triunfó 
 		{
 			System.out.println("DERROTA.");
 		}
-		else 
+		else //Si ninguno ganó 2 veces, empataron.
 		{
 			System.out.println("EMPATE");
 		}

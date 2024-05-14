@@ -32,4 +32,6 @@ public class Calculadora
 			return a / b; //devolvemos el resultado de la división.
 		}
 	}
+	
+	//Comprobamos esta clase en Punto9.Principal
 }

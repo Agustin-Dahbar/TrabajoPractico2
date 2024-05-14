@@ -16,7 +16,7 @@ public class SuperHeroe
 		this.superpoderes = superpoderes;
 	}
 	
-	//Setters de los 3 atributos int.
+	//Setters de los 3 atributos int. Utilizamos un metodo que compruebe si el número argumentado es correcto y lo devuelve o si debe devolver algún límite.
 	public void setFuerza(int fuerza) 
 	{
 		this.fuerza = validarDatos(fuerza);
@@ -32,6 +32,22 @@ public class SuperHeroe
 		this.superpoderes = validarDatos(superpoderes);
 	}
 	
+	//Metodo que evaluará al número argumentado en los setters para ver si esta entre 0 y 100 o devolver el límite más cercano.
+	public int validarDatos(int numero) 
+	{
+		if(numero >= 0 && numero <= 100)  // De 0 a 100
+		{
+			return numero;
+		}
+		else if(numero > 100) //A partir de 101
+		{
+			return 100;
+		}
+		else  //Números negativos (menos de 0)
+		{
+			return 0;
+		}
+	}
 	
 	//Metodo en el que competirán los dos superheroes
 	public void competir(SuperHeroe rival) 
@@ -83,28 +99,12 @@ public class SuperHeroe
 			System.out.println("EMPATE");
 		}
 	}
-	
+
+	//To String para que se puedan imprimir las instancias de clases con el constructor parametrizado.
 	@Override
 	public String toString() {
-		return "SuperHeroe [nombre=" + nombre + ", fuerza=" + fuerza + ", resistencia=" + resistencia
-				+ ", superpoderes=" + superpoderes + "]";
-	}
-
-	//Metodo que nos devolverá el número que asignaremos al atributo, el número que se le argumente a los setters irá hacia este metodo y lo convertirá en el valor final del atributo.
-	public int validarDatos(int numero) 
-	{
-		if(numero >= 0 && numero <= 100)  // De 0 a 100
-		{
-			return numero;
-		}
-		else if(numero > 100) //A partir de 101
-		{
-			return 100;
-		}
-		else  //Números negativos (menos de 0)
-		{
-			return 0;
-		}
+		return "SuperHeroe [Nombre = " + nombre + ", Fuerza = " + fuerza + ", Resistencia = " + resistencia
+				+ ", Superpoderes = " + superpoderes + "]";
 	}
 	
 }

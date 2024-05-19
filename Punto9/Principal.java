@@ -21,9 +21,10 @@ public class Principal
 		
 		//No asignamos que son pareja porque me generaba error en la consola.
 		
+		
 		//Creamos las cuentas bancarias de cada uno de ellos. La consigna principal del ejercicio.
-		CuentaBancaria cuentaBancariaFulano = new CuentaBancaria("10-12345678-8",TipoCuenta.CAJA_AHORRO, fulano);
-		CuentaBancaria cuentaBancariaMengana = new CuentaBancaria("10-9123456", TipoCuenta.CUENTA_CORRIENTE, mengana);
+		CuentaBancaria cuentaBancariaFulano = new CuentaBancaria("11-12345678-8",TipoCuenta.CAJA_AHORRO, fulano);
+		CuentaBancaria cuentaBancariaMengana = new CuentaBancaria("12-9123456", TipoCuenta.CUENTA_CORRIENTE, mengana);
 		
 		System.out.println(cuentaBancariaFulano);
 		System.out.println(cuentaBancariaMengana);

@@ -123,7 +123,7 @@ public class Test
 		if(tarjeta.realizarCompra(montoCompra))  //Retorna true. Es decir que la condición es true. Por lo tanto se ejecuta el bloque de código siguiente.
 		{
 			System.out.println("Compra realizada por $ " + montoCompra);
-			tarjeta.acumularGastoActual(montoCompra);
+			//Restarle el montoCompra al montoDisponible para que responda bien la 134.
 		}
 		else 
 		{
@@ -145,7 +145,6 @@ public class Test
         if(tarjeta.realizarCompra(segundoMontoCompra)) 
         {
         	System.out.println("Compra realizada por $ " + segundoMontoCompra);
-        	tarjeta.acumularGastoActual(montoCompra);
         }
         else 
         {

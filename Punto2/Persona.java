@@ -76,6 +76,11 @@ public class Persona
 		this.DNI = dni;
 	}
 	
+	public int getDni () 
+	{
+		return DNI;
+	}
+	
 	//Metodos del punto 7 que simulan trabajar y descansar.
 	public void trabajar() 
 	{

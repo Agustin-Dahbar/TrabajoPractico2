@@ -17,7 +17,7 @@ public class Ejercicio1 {
 		Scanner scanner = new Scanner(System.in); //Creamos scanner para entrada del numero.
 		
 		System.out.println(texto); //Imprimimos la instrucción.
-		int numero = scanner.nextInt(); //Le pedimos el numero
+		int numero = scanner.nextInt(); //Le pedimos el número. 
 		
 		while(!(numero > minimo && numero < maximo)) //Validamos que este entre los 2 números que le indicamos. 
 		{
@@ -42,7 +42,7 @@ public class Ejercicio1 {
 		System.out.println(""); //Espacio entre los dos metodos
 		
 		//Ahora el metodo de la suma.
-		System.out.println("Ingresa dos numeros, los sumare.");
+		System.out.println("Ingresa dos numeros, los sumaré.");
 		int num1 = scanner.nextInt();
 		int num2 = scanner.nextInt();
 		System.out.println("=");

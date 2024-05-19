@@ -20,7 +20,7 @@ public class CuentaBancaria
 	//Getter del CBU
 	public String generarCBU() 
 	{
-		return "10-9123456-6"; //Faltaria sumarle al 10 el valor ordinal del tipo de cuenta, cosa que no se que es.
+		return this.tipo.ordinal() + 10 + " - " + this.titular.getDni() + " - " + this.titular.getDni() % 10;
 	}
 	
 	//Getter del saldo

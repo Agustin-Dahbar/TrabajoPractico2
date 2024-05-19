@@ -74,15 +74,15 @@ public class TarjetaDeCredito
 	}
 	
 	//Metodo que comprueba si el monto recibido puede usarse según el límite de compra permitido.
-	private void compraPosible(double montoRecibido) 
+	private boolean compraPosible(double montoRecibido) 
 	{
-		if(montoRecibido <= limiteCompra) 
+		if(limiteCompra >= montoRecibido) 
 		{
-			System.out.println("Se puede hacer la compra");
+			return true;
 		}
 		else // Se ejecutará solo cuando montoRecibido > limiteCompra. 
 		{
-			System.out.println("El monto supera al límite permitido, no puedes hacer la compra.");
+			return false;
 		}
 	}
 	
@@ -93,7 +93,7 @@ public class TarjetaDeCredito
 	}
 	
 	//Metodo privado que recibe un importe a usar en la compra y lo suma a lo gastado actualmente.
-	public void acumularGastoActual(double importeCompra)  
+	private void acumularGastoActual(double importeCompra)  
 	{
 		 acumuladoActual += importeCompra;
 	}
